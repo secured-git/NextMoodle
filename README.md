@@ -15,7 +15,6 @@ NextMoodle is a comprehensive educational management platform designed to stream
 5. [Database Security](#database-security)
 6. [Testing](#testing)
 7. [Conflict Scenarios](#conflict-scenarios)
-8. [Contact](#contact)
 
 ## Features
 
