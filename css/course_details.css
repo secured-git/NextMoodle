@@ -1,0 +1,261 @@
+/* General Styles */
+body {
+
+    background-color: #121212;
+}
+
+.main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* Course Sections */
+.course-details, .course-slides, .course-assignments {
+    margin-bottom: 30px;
+}
+
+/* Slide Cards */
+.gradient-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+/* No slides available message */
+.no-slides {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #999;
+}
+
+/* Table Styles for Assignments */
+.dark-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.dark-table th, .dark-table td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+.dark-table th {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-table td {
+    background-color: #121212;
+}
+
+.dark-table tr:hover td {
+    background-color: #1e1e1e;
+}
+
+/* Assignment Submission */
+.submit-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* General Notebook Style */
+.dark-notebook-course-details {
+    margin-bottom: 30px;
+    padding: 1rem;
+}
+
+.notebook-card_title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #66afe1;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.notebook-subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Notebook Design */
+.notebook-card {
+    max-width: 600px; /* Set max width for readability */
+    margin: 0 auto; /* Center align */
+    background-color: #121212;
+    border-radius: 8px;
+    position: relative;
+    padding: 1rem 2rem;
+    background: repeating-linear-gradient(
+        #0000 0 calc(1.5rem - 1px), /* Transparent between lines */
+        rgba(255, 255, 255, 0.2) 0 1.5rem /* Light, semi-transparent line */
+    ) right bottom / 100% 100%, 
+    linear-gradient(rgba(9, 90, 182, 0.61) 0 0) 30px 0 / 2px 100% #121212; /* Red vertical margin line */
+    line-height: 1.5rem;
+    -webkit-mask: radial-gradient(circle 0.8rem at 2px 50%, #0000 98%, #000) 0 0 / 100% 2.4rem;
+    box-shadow: inset 0 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.notebook-description {
+    font-family: 'Courier New', monospace;
+    font-size: 1.2rem; /* Adjust font size for alignment */
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    line-height: 1.5rem; /* Matches the background lines */
+    text-align: left;
+    overflow: hidden;
+    word-wrap: break-word;
+    max-width: 100%;
+}
+
+/* Read More Link Styling */
+#read-more {
+    color: #66afe1;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#read-more:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    html, body {
+   
+        width: 100%;
+        overflow-x: hidden;  /* Prevent horizontal scrolling */
+    }
+
+    .container {
+        padding-right: 10px; /* Add space to the right side of the container */
+    }
+
+   
+
+    .btn {
+        font-size: 0.8rem;
+    }
+
+    .submit-btn {
+        font-size: 0.4rem;
+        padding: 0;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .notebook-card {
+       width: 40%;
+        margin-left: 0;
+    }
+
+    .notebook-card_title {
+        font-size: 1.6rem;
+    }
+
+    .notebook-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .notebook-description {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+        line-height: 1.4rem; /* Adjusts to smaller screens */
+        max-width: 100%;  /* Ensure description doesn't overflow */
+        word-wrap: break-word; /* Prevents text overflow */
+    }
+
+    .course-assignments{
+        margin-left: -16px;
+    }
+
+    .course-assignments td, th, tr {
+        padding: 0px;
+    }
+
+
+
+    .dark-table td {
+        font-size: 0.6rem;
+    }
+
+    .dark-table th{
+        font-size: 0.6rem;
+    }
+
+    .dark-table form input{
+        font-size: 0.3rem;
+    }
+}
+

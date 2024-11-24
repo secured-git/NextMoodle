@@ -1,0 +1,121 @@
+/* General Body Styles */
+body {
+    background-color: #121212;
+}
+
+/* Gradient Cards Container */
+.gradient-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Max 4 cards per row */
+    gap: 20px;
+    padding: 20px;
+    width: 80%; /* Set max width to 80% */
+    margin: 0 auto; /* Center the container */
+}
+
+/* Card Styles */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    background: linear-gradient(71deg, #080509, #1a171c, #080509);
+    color: #fff;
+    text-align: left;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    height: auto; /* Card height adjusts based on content */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Hover Effect for Cards */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Title Styles Inside the Card */
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Professor Name Styles Inside the Card */
+.card-professor {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Button Container at the Bottom of the Card */
+.card-buttons {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Button Styles */
+.card a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+/* Button Hover Effect */
+.card a:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .gradient-cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row on tablets */
+        padding: 15px; /* Adjust padding for medium screens */
+    }
+
+    .card {
+        padding: 12px; /* Slightly reduced padding */
+    }
+
+    .card-title {
+        font-size: 1.1rem; /* Adjusted title font size */
+    }
+
+    .card-professor {
+        font-size: 0.95rem; /* Adjusted professor font size */
+    }
+
+    .card-buttons a {
+        font-size: 0.85rem; 
+        padding: 6px 10px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .gradient-cards {
+        grid-template-columns: 1fr; 
+        padding: 10px; 
+    }
+
+    .card {
+        padding: 10px; 
+    }
+
+    .card-title {
+        font-size: 1rem; 
+    }
+
+    .card-professor {
+        font-size: 0.9rem; 
+    }
+
+    .card-buttons a {
+        font-size: 0.8rem; 
+        padding: 6px 10px; 
+    }
+}

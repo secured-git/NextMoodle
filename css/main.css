@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header styles */
+.header {
+    background-color: #121212;
+    padding: 20px 0;
+    border-bottom: 2px solid #1e1e1e;
+}
+
+.header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.header-title span {
+    color: #4CAF50;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Bottom Navigation Menu */
+.bottom-nav {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.bottom-nav a {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 14px;
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.bottom-nav a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.bottom-nav a.active {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Ensure no text is hidden behind the navigation */
+body {
+    padding-bottom: 80px; /* Adjust based on the height of the navigation bar */
+}
+
+
+@media (max-width: 768px) {
+
+
+    .header-title {
+        font-size: 1rem;
+        margin-left: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        margin-right: 20px;
+    }
+
+    .nav-links a{
+        font-size: 0.8rem;
+    }
+}

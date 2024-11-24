@@ -1,0 +1,446 @@
+/* General Body Styling */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0 0 80px; /* Add space for bottom navigation */
+    box-sizing: border-box;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 30px 0;
+    color: #f4f4f4;
+}
+
+/* Form Container */
+form {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Form Labels */
+form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #bdbdbd;
+    font-size: 1rem;
+}
+
+/* Input and Textarea Fields */
+form input[type="text"], 
+form input[type="datetime-local"],
+form textarea {
+    width: calc(100% - 20px); /* Adjust for padding */
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 15px;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+form input[type="text"]:focus,
+form input[type="datetime-local"]:focus,
+form textarea:focus {
+    outline: none;
+    background-color: #3a3a3a;
+    box-shadow: 0 0 5px rgba(100, 181, 246, 0.8);
+}
+
+/* Textarea Specific Styling */
+form textarea {
+    height: 150px; /* Sufficient for multi-line input */
+    resize: none;
+}
+
+/* File Input */
+form input[type="file"] {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #bdbdbd;
+    background-color: #2a2a2a;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+form input[type="file"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(100, 181, 246, 0.8);
+}
+
+/* Form Buttons */
+form button {
+    float: right;
+    padding: 10px 16px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form button:hover {
+    background-color: #45A049;
+}
+
+
+/* General Reset for Assignment Cards */
+.assignment-cards,
+.assignment-cards * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Assignment List Styling */
+.assignment-cards {
+  list-style: none;
+  counter-reset: assignmentCount;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  --cardsGap: 1rem;
+  gap: var(--cardsGap);
+  padding-bottom: var(--cardsGap);
+  margin: 0 0 0 15%;
+}
+
+/* Assignment Card Item */
+.assignment-cards li {
+  counter-increment: assignmentCount;
+  display: flex;
+  color: white;
+  --labelOffset: 1rem;
+  --arrowClipSize: 1.5rem;
+  margin-top: var(--labelOffset);
+}
+
+.assignment-cards li::before {
+  content: counter(assignmentCount, decimal-leading-zero);
+  background: white;
+  color: var(--cardColor);
+  font-size: 2em;
+  font-weight: 700;
+  transform: translateY(calc(-1 * var(--labelOffset)));
+  margin-right: calc(-1 * var(--labelOffset));
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 0.5em;
+}
+
+/* Card Content Styling */
+.assignment-cards li .content {
+  background-color: var(--cardColor);
+  --inlinePadding: 1em;
+  --boxPadding: 0.5em;
+  display: grid;
+  padding: var(--boxPadding) calc(var(--inlinePadding) + var(--arrowClipSize))
+    var(--boxPadding) calc(var(--inlinePadding) + var(--labelOffset));
+  grid-template-areas:
+    "title"
+    "text";
+  gap: 0.5em 0;
+  clip-path: polygon(
+    0 0,
+    calc(100% - var(--arrowClipSize)) 0,
+    100% 50%,
+    calc(100% - var(--arrowClipSize)) 100%,
+    calc(100% - var(--arrowClipSize)) calc(100% + var(--cardsGap)),
+    0 calc(100% + var(--cardsGap))
+  );
+  position: relative;
+}
+
+/* Decorative Elements for Cards */
+.assignment-cards li .content::before {
+  content: "";
+  position: absolute;
+  width: var(--labelOffset);
+  height: var(--labelOffset);
+  background: var(--cardColor);
+  left: 0;
+  bottom: 0;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  filter: brightness(0.75);
+}
+
+.assignment-cards li .content::after {
+  content: "";
+  position: absolute;
+  height: var(--cardsGap);
+  width: var(--cardsGap);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.25), transparent 50%);
+  left: 0;
+  top: 100%;
+}
+
+/* Title Styling */
+.assignment-cards li .content .title {
+  grid-area: title;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #4CAF50;
+}
+
+/* Description and Deadline Styling */
+.assignment-cards li .content .text {
+  grid-area: text;
+  font-size: 1rem;
+}
+
+
+/* Submitted Assignments Section */
+.submitted-assignments {
+    width: 70%;  /* Default width for larger screens */
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.submitted-assignments h3 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.submitted-assignments h4{
+    color: #4CAF50;
+}
+
+/* Table Styling */
+.submitted-assignments table {
+    width: 100%;  /* Table takes up 100% of the available space */
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.submitted-assignments th, .submitted-assignments td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: left;
+}
+
+.submitted-assignments th {
+    background-color: #222;
+    color: #fff;
+}
+
+.submitted-assignments td {
+    background-color: #121212;
+}
+
+.submitted-assignments tr:hover td {
+    background-color: #1e1e1e;
+}
+
+/* Make the form buttons responsive */
+.submitted-assignments form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.submitted-assignments input[type="number"] {
+    padding: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    width: auto;
+    font-size: 14px;
+    max-width: 100px;  /* Ensure input doesn't overflow */
+}
+
+.submitted-assignments button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.submitted-assignments button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* View File Link Styling */
+.submitted-assignments a {
+    color: #ff6347;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.submitted-assignments a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles for Mobile */
+@media screen and (max-width: 768px) {
+    .submitted-assignments {
+        width: 100%;  /* Full width on mobile */
+        padding: 15px;  /* Adjust padding for mobile */
+        margin: 0;  /* Remove margin */
+    }
+
+    .submitted-assignments table {
+        width: 100%;
+        font-size: 12px;  /* Smaller font size on mobile */
+    }
+
+    .submitted-assignments th, .submitted-assignments td {
+        padding: 8px;  /* Adjust padding for mobile */
+    }
+
+    .submitted-assignments form {
+        flex-direction: column;  /* Stack form elements vertically on small screens */
+        align-items: flex-start;  /* Align form items to the left */
+    }
+
+    .submitted-assignments input[type="number"],
+    .submitted-assignments button[type="submit"] {
+        width: 40%;  /* Make inputs and buttons full width on small screens */
+        max-width: none;  /* Remove width constraint */
+    }
+
+    /* Ensure table content does not overflow on mobile */
+    .submitted-assignments table {
+        overflow-x: auto;
+        display: block;
+    }
+}
+
+
+/* Manage Slides Section */
+.manage-slides {
+    width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1c1c1c;
+    border-radius: 10px;
+}
+
+.manage-slides form {
+    padding: 0px;
+}
+
+.manage-slides h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Card Layout for Each Slide */
+.manage-slides ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+.manage-slides li {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px;
+    width: 31%;  /* 3 cards per row, with gap */
+    box-sizing: border-box;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.manage-slides li:hover {
+    transform: scale(1.05);
+}
+
+.manage-slides strong {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Form Styling Inside Card */
+.manage-slides input[type="text"] {
+    padding: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    width: 90%;
+    font-size: 14px;
+}
+
+.manage-slides button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.manage-slides button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Delete Link Styling */
+.manage-slides a {
+    color: #ff6347;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.manage-slides a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 1024px) {
+    .manage-slides li {
+        width: 48%;  /* 2 cards per row on medium screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .manage-slides li {
+        width: 100%; /* Single column on small screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .assignment-cards{
+        margin: 0;
+        font-size: 8px;
+    }
+    
+}
+
+
