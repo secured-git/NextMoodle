@@ -22,7 +22,7 @@ NextMoodle simplifies educational workflows by offering:
 - Tools for students to enroll in courses and submit assignments.
 - Tools for professors to manage courses and grade assignments.
 - Administrative tools for secretaries and administrators to manage users, courses, and audit logs.
-- Decentralized application (DApp) integration for blockchain-based solutions.
+
 
 ---
 
