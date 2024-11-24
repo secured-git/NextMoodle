@@ -1,5 +1,5 @@
 
-# NextMoodle
+# NextMoodle 
 
 NextMoodle is a comprehensive educational management platform designed to streamline course enrollment, assignment submission, and grading processes. It ensures robust security and efficient project management, catering to the needs of students, professors, secretaries, and administrators.
 
