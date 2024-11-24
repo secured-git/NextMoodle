@@ -26,7 +26,7 @@ NextMoodle simplifies educational workflows by offering:
 
 ---
 
-## Click here to see [Database Design and Relationships](https://github.com/secured-git/NextMoodle/uml.png)
+## Click here to see [Database Design and Relationships]([https://github.com/secured-git/NextMoodle/uml.png](https://github.com/secured-git/NextMoodle/blob/main/uml.png))
 
 ## Features
 
