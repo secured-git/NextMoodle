@@ -1,6 +1,3 @@
-Certainly! Here is the revised README for your project, NextMoodle:
-
----
 
 # NextMoodle
 
