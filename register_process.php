@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 
-    if (strpos($email, '@student.uni.lu') !== false) {
+    if (strpos($email, '@student.mit.edu') !== false) {
         $role = 'student';
-    } elseif (strpos($email, '@uni.lu') !== false) {
+    } elseif (strpos($email, '@mit.edu') !== false) {
         $role = 'professor';
     } else {
         echo '<script>alert("Invalid email domain! Only students and faculty members are allowed."); window.location.href="index.php";</script>';
