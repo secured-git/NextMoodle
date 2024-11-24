@@ -26,13 +26,14 @@ NextMoodle simplifies educational workflows by offering:
 
 ---
 
+## [Database Design and Relationships](https://github.com/secured-git/NextMoodle/uml.png)
+
 ## Features
 
 - **User Authentication:** Provides secure login and registration systems tailored for role-based access.
 - **Course Management:** Allows users to create, view, and enroll in courses.
 - **Assignment Management:** Streamlines assignment submissions, grading, and feedback.
 - **Audit Logs:** Tracks and records user activities for security and operational insights.
-- **Decentralized Applications:** Supports blockchain-based solutions for future-ready education systems.
 
 ---
 
