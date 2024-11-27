@@ -5,7 +5,7 @@
 NextMoodle is a robust and secure educational management platform designed to streamline operations such as course enrollment, assignment submission, grading, and administrative management. It provides a role-based system catering to the specific needs of students, professors, secretaries, and administrators, ensuring a seamless and secure user experience.
 
 ## Table of Contents
-0. [Watch demo video](https://streamable.com/z3i3ba)
+0. [Watch demo video](https://app.weet.co/play/c35b5c5c/create-video-tutorials-with-weet)
 1. [Overview](#overview)
 2. [Features](#features)
 3. [Technology Stack](#technology-stack)
@@ -25,7 +25,7 @@ NextMoodle simplifies educational workflows by offering:
 
 
 ---
-## Click here to see [Demo](https://streamable.com/z3i3ba)
+## Click here to see [Demo](https://app.weet.co/play/c35b5c5c/create-video-tutorials-with-weet)
 
 
 ## Click here to see [Database Design and Relationships](https://github.com/secured-git/NextMoodle/blob/main/uml.png)
