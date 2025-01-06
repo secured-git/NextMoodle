@@ -1,9 +1,12 @@
 <?php
 
 $host = 'localhost';
-$dbname = 'cms_project';
-$user = 'root'; 
-$pass = 'MySecurePass1!'; 
+$dbname = '#####';
+$user = '####'; 
+$pass = '#####'; 
+
+# Always Create a .env file for storing sensitive information
+
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
